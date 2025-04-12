@@ -1,0 +1,336 @@
+/* Styles spécifiques pour la section À propos */
+.about-section {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(30, 115, 190, 0.7), rgba(255, 215, 0, 0.7));
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.about-image:hover::before {
+    opacity: 0.3;
+}
+
+.about-image-badge {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ffd700;
+    color: #333;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    padding-right: 20px;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #1e73be;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.about-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 3px;
+    background-color: #ffd700;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.about-features {
+    margin: 30px 0;
+}
+
+.about-feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.about-feature-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(30, 115, 190, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.about-feature-icon i {
+    color: #1e73be;
+    font-size: 20px;
+}
+
+.about-feature-text h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.about-feature-text p {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.about-cta {
+    margin-top: 30px;
+}
+
+.about-cta .btn {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #1e73be;
+    color: #fff;
+}
+
+.stat-item:hover h3,
+.stat-item:hover p {
+    color: #fff;
+}
+
+.stat-item h3 {
+    font-size: 36px;
+    color: #1e73be;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Section Valeurs */
+.values-section {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.value-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.value-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #1e73be;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-card:hover::before {
+    height: 10px;
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(30, 115, 190, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+    background-color: #1e73be;
+}
+
+.value-icon i {
+    font-size: 36px;
+    color: #1e73be;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon i {
+    color: #fff;
+}
+
+.value-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.value-card p {
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Animation pour la section À propos */
+.about-content.animate,
+.about-image.animate,
+.stat-item.animate,
+.value-card.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+}
+
+.about-content.animate.visible,
+.about-image.animate.visible,
+.stat-item.animate.visible,
+.value-card.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Styles responsifs pour la section À propos */
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .about-image {
+        order: 1;
+    }
+    
+    .about-content {
+        order: 2;
+        padding-right: 0;
+    }
+    
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 60px 0;
+    }
+    
+    .about-content h2 {
+        font-size: 30px;
+    }
+    
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .stat-item {
+        padding: 20px;
+    }
+    
+    .stat-item h3 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-feature-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .about-feature-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}

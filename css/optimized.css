@@ -1,0 +1,182 @@
+/* Optimisations de performance pour EcoPro Nettoyage Paris */
+
+/* Combinaison des fichiers CSS pour réduire les requêtes HTTP */
+@import 'header-footer.css';
+@import 'services.css';
+@import 'testimonials.css';
+@import 'about.css';
+@import 'contact-form.css';
+@import 'animations.css';
+@import 'mobile.css';
+
+/* Optimisations générales pour les performances */
+html {
+    font-display: swap; /* Améliore le FCP (First Contentful Paint) */
+}
+
+/* Optimisations pour les images */
+img {
+    max-width: 100%;
+    height: auto;
+    will-change: transform; /* Optimise les animations sur les images */
+}
+
+/* Optimisations pour les polices */
+body {
+    text-rendering: optimizeSpeed;
+}
+
+/* Optimisations pour les animations */
+.animate {
+    will-change: opacity, transform;
+    backface-visibility: hidden;
+}
+
+/* Désactiver les animations pour les utilisateurs qui préfèrent les mouvements réduits */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Optimisations pour le chargement différé des images */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+}
+
+/* Optimisations pour les Core Web Vitals */
+/* LCP (Largest Contentful Paint) - Optimiser le chargement des grandes images */
+.hero-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 600px;
+}
+
+/* CLS (Cumulative Layout Shift) - Réserver de l'espace pour les éléments qui chargent */
+.service-icon,
+.testimonial-author-img,
+.about-image {
+    aspect-ratio: 16/9;
+}
+
+/* FID (First Input Delay) - Optimiser le JavaScript */
+/* Ces optimisations sont principalement dans les fichiers JS */
+
+/* Optimisations pour le rendu */
+.container,
+section,
+.footer-widgets {
+    contain: content;
+}
+
+/* Optimisations pour les couleurs (réduire le nombre de couleurs uniques) */
+:root {
+    --primary-color: #1e73be;
+    --secondary-color: #ffd700;
+    --text-color: #333;
+    --text-light: #666;
+    --text-lighter: #aaa;
+    --bg-color: #fff;
+    --bg-light: #f9f9f9;
+    --bg-dark: #222;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Utilisation des variables CSS pour réduire la taille du fichier */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+}
+
+/* Optimisations pour les ombres */
+.service-card,
+.engagement-card,
+.pricing-card,
+.value-card,
+.testimonial-item,
+.contact-form {
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+/* Optimisations pour les transitions */
+.btn,
+.service-card,
+.engagement-card,
+.pricing-card,
+.value-card,
+.testimonial-item,
+.footer-widget ul li a,
+.social-links a {
+    transition: all 0.3s ease;
+}
+
+/* Optimisations pour les médias queries */
+@media (max-width: 992px) {
+    .hero-section,
+    .services-section,
+    .testimonials-section,
+    .about-section,
+    .contact-section {
+        content-visibility: auto;
+        contain-intrinsic-size: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section,
+    .services-section,
+    .testimonials-section,
+    .about-section,
+    .contact-section {
+        content-visibility: auto;
+        contain-intrinsic-size: 400px;
+    }
+}
+
+/* Optimisations pour l'impression */
+@media print {
+    .back-to-top,
+    .cta-button,
+    .mobile-menu-toggle,
+    .footer-widgets,
+    .footer-bottom {
+        display: none !important;
+    }
+    
+    body {
+        background-color: #fff !important;
+        color: #000 !important;
+    }
+    
+    a {
+        text-decoration: underline !important;
+        color: #000 !important;
+    }
+    
+    .container {
+        width: 100% !important;
+        max-width: none !important;
+    }
+    
+    section {
+        padding: 20px 0 !important;
+        page-break-inside: avoid;
+    }
+}

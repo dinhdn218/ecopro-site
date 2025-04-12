@@ -1,0 +1,338 @@
+/* Styles spécifiques pour assurer la responsivité mobile */
+
+/* Styles généraux pour mobile */
+@media (max-width: 992px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 32px;
+    }
+    
+    .section-header p {
+        font-size: 16px;
+    }
+    
+    .btn {
+        padding: 10px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 28px;
+    }
+    
+    .section-header p {
+        font-size: 15px;
+    }
+    
+    /* Ajustements pour l'en-tête sur mobile */
+    #header {
+        height: auto;
+    }
+    
+    .top-bar {
+        display: none; /* Masquer la barre supérieure sur mobile */
+    }
+    
+    .main-header {
+        padding: 10px 0;
+    }
+    
+    .logo h1 {
+        font-size: 22px;
+    }
+    
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .main-nav.active {
+        max-height: 300px;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+    }
+    
+    .main-nav li {
+        margin: 0;
+    }
+    
+    .main-nav a {
+        display: block;
+        padding: 10px 20px;
+        border-bottom: 1px solid #f5f5f5;
+    }
+    
+    .main-nav a:after {
+        display: none;
+    }
+    
+    .cta-button {
+        margin-right: 50px;
+    }
+    
+    .cta-button .btn {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+    
+    /* Ajustements pour la section hero sur mobile */
+    .hero-section {
+        padding: 120px 0 60px;
+        text-align: center;
+    }
+    
+    .hero-content h2 {
+        font-size: 32px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+    
+    /* Ajustements pour les grilles sur mobile */
+    .services-grid,
+    .engagements-grid,
+    .pricing-grid,
+    .values-grid,
+    .footer-widgets {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .zone-content,
+    .contact-container,
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Ajustements pour les cartes de service sur mobile */
+    .service-card {
+        margin-bottom: 20px;
+    }
+    
+    .service-icon {
+        height: 180px;
+    }
+    
+    /* Ajustements pour les témoignages sur mobile */
+    .testimonial-item {
+        padding: 20px;
+    }
+    
+    /* Ajustements pour le formulaire de contact sur mobile */
+    .contact-form {
+        padding: 25px 20px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+    }
+    
+    /* Ajustements pour le pied de page sur mobile */
+    .footer-widget {
+        margin-bottom: 30px;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+    }
+    
+    .footer-bottom .container {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        margin-top: 15px;
+    }
+    
+    .footer-links a {
+        margin: 0 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-header h2 {
+        font-size: 24px;
+    }
+    
+    .section-header p {
+        font-size: 14px;
+    }
+    
+    /* Ajustements supplémentaires pour très petits écrans */
+    .hero-content h2 {
+        font-size: 28px;
+    }
+    
+    .hero-content p {
+        font-size: 15px;
+    }
+    
+    .service-card h3,
+    .engagement-card h3,
+    .pricing-card h3,
+    .value-card h3 {
+        font-size: 18px;
+    }
+    
+    .service-card p,
+    .engagement-card p,
+    .value-card p {
+        font-size: 14px;
+    }
+    
+    .testimonial-content p {
+        font-size: 15px;
+    }
+    
+    .testimonial-author h4 {
+        font-size: 16px;
+    }
+    
+    .faq-question h3 {
+        font-size: 16px;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-item {
+        padding: 20px 15px;
+    }
+    
+    .info-item h3 {
+        font-size: 18px;
+    }
+    
+    /* Correction des marges et espacements pour mobile */
+    .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    section {
+        padding: 50px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    /* Ajustements pour les animations sur mobile */
+    .animate.visible {
+        animation-duration: 0.5s;
+    }
+}
+
+/* Corrections spécifiques pour les problèmes d'affichage mobile */
+@media (max-width: 768px) {
+    /* Correction pour le header qui cache le contenu */
+    body {
+        padding-top: 60px;
+    }
+    
+    /* Amélioration de la lisibilité des textes sur fond d'image */
+    .hero-section {
+        background: linear-gradient(rgba(30, 115, 190, 0.9), rgba(30, 115, 190, 0.9)), url('../images/hero-bg.jpg') no-repeat center center/cover;
+    }
+    
+    /* Correction pour les images qui débordent */
+    .service-icon img,
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Correction pour les boutons qui se chevauchent */
+    .about-cta .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    /* Correction pour les textes qui se chevauchent */
+    .pricing-card {
+        padding: 20px;
+    }
+    
+    .pricing-features ul li {
+        font-size: 14px;
+    }
+    
+    /* Amélioration de la navigation mobile */
+    .mobile-menu-toggle {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+    }
+    
+    /* Correction pour les formulaires sur mobile */
+    .form-group button {
+        height: auto;
+        padding: 12px;
+    }
+}
+
+/* Optimisations pour les performances sur mobile */
+@media (max-width: 768px) {
+    /* Réduire les animations pour améliorer les performances */
+    .animate.visible {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+    
+    /* Simplifier les ombres pour améliorer les performances */
+    .service-card,
+    .engagement-card,
+    .pricing-card,
+    .value-card,
+    .testimonial-item,
+    .contact-form {
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Désactiver les effets de survol sur mobile */
+    .service-card:hover,
+    .engagement-card:hover,
+    .pricing-card:hover,
+    .value-card:hover,
+    .testimonial-item:hover {
+        transform: none;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Optimiser les transitions pour mobile */
+    .btn,
+    .main-nav a,
+    .social-links a,
+    .footer-widget ul li a {
+        transition: color 0.3s ease;
+    }
+}
