@@ -50,6 +50,21 @@
         });
     </script>
 
+    <!-- Animate On Scrool -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                once: true,
+                duration: 500,
+                offset: 300
+            });
+        });
+    </script>
+
 </head>
 <body>
     <!-- Chargeur de page -->
@@ -119,7 +134,7 @@
     </section>
 
     <!-- Section Services -->
-    <section id="services" class="services-section">
+    <section id="services" class="services-section" data-aos="fade-up" data-aos-offset="0">
         <div class="container">
             <div class="section-header fade-in">
                 <h2>Nos Services</h2>
@@ -127,7 +142,7 @@
             </div>
             <div class="service-wrapper">
                 <div class="services-grid">
-                    <div class="service-card slide-in-left delay-1">
+                    <div class="service-card slide-in-left delay-1" data-aos="flip-left">
                         <div class="service-icon img-effect">
                             <img src="images/entretien_bureaux.jpg" alt="Entretien de bureaux" width="400" height="300">
                         </div>
@@ -137,7 +152,7 @@
                             <a href="#contact" class="btn btn-secondary">En savoir plus</a>
                         </div>
                     </div>
-                    <div class="service-card slide-in-left delay-2">
+                    <div class="service-card slide-in-left delay-2" data-aos="flip-left">
                         <div class="service-icon img-effect">
                             <img src="images/nettoyage_vitres.png" alt="Nettoyage de vitres" width="400" height="300">
                         </div>
@@ -147,7 +162,7 @@
                             <a href="#contact" class="btn btn-secondary">En savoir plus</a>
                         </div>
                     </div>
-                    <div class="service-card slide-in-right delay-3">
+                    <div class="service-card slide-in-right delay-3" data-aos="flip-left">
                         <div class="service-icon img-effect">
                             <img src="images/desinfection.png" alt="Désinfection" width="400" height="300">
                         </div>
@@ -159,7 +174,7 @@
                     </div>
                     
                 </div>
-                <div class="service-card slide-in-right delay-4">
+                <div class="service-card slide-in-right delay-4" data-aos="flip-up">
                     <div class="service-icon">
                         <i class="fas fa-calendar-check" aria-hidden="true"></i>
                     </div>
@@ -174,7 +189,7 @@
     </section>
 
     <!-- Section Zone d'intervention -->
-    <section id="zone-intervention" class="zone-section">
+    <section id="zone-intervention" class="zone-section" data-aos="zoom-in">
         <div class="container">
             <div class="section-header fade-in">
                 <h2>Notre Zone d'Intervention</h2>
@@ -204,7 +219,7 @@
     </section>
 
     <!-- Section Engagements -->
-    <section id="engagements" class="engagements-section">
+    <section id="engagements" class="engagements-section" data-aos="zoom-out">
         <div class="container">
             <div class="section-header fade-in">
                 <h2>Nos Engagements</h2>
@@ -330,7 +345,7 @@
                 <p>Des formules adaptées à tous les budgets</p>
             </div>
             <div class="pricing-grid">
-                <div class="pricing-card slide-in-left delay-1">
+                <div class="pricing-card slide-in-left delay-1" data-aos="flip-up">
                     <div class="pricing-header">
                         <h3>Formule Essentielle</h3>
                         <div class="price">À partir de <span>25€</span>/h</div>
@@ -349,7 +364,7 @@
                         <a href="#devis" class="btn btn-secondary">Demander un devis</a>
                     </div>
                 </div>
-                <div class="pricing-card featured zoom-in delay-2">
+                <div class="pricing-card featured zoom-in delay-2" data-aos="flip-right">
                     <div class="pricing-header">
                         <h3>Formule Complète</h3>
                         <div class="price">À partir de <span>35€</span>/h</div>
@@ -368,7 +383,7 @@
                         <a href="#devis" class="btn btn-primary">Demander un devis</a>
                     </div>
                 </div>
-                <div class="pricing-card slide-in-right delay-3">
+                <div class="pricing-card slide-in-right delay-3" data-aos="flip-down">
                     <div class="pricing-header">
                         <h3>Formule Premium</h3>
                         <div class="price">À partir de <span>45€</span>/h</div>
