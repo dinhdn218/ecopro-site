@@ -28,7 +28,7 @@
     <!-- Préchargement des polices -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles-fixed.css">
@@ -41,6 +41,15 @@
     
     <!-- Script de détection JavaScript -->
     <script>document.documentElement.classList.remove('no-js');</script>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', '/js/particles.json', function() {
+          console.log('particles.js loaded - callback');
+        });
+    </script>
+
 </head>
 <body>
     <!-- Chargeur de page -->
@@ -49,7 +58,7 @@
     </div>
     
     <!-- Bouton retour en haut -->
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Retour en haut de page">
+    <a href="#accueil" class="back-to-top" id="backToTop" aria-label="Retour en haut de page">
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </a>
 
@@ -71,7 +80,7 @@
         <div class="main-header">
             <div class="container">
                 <div class="logo">
-                    <a href="#" aria-label="EcoPro Nettoyage Paris">
+                    <a href="#accueil" aria-label="EcoPro Nettoyage Paris">
                         <h1>EcoPro<span>Nettoyage</span></h1>
                     </a>
                 </div>
@@ -96,12 +105,14 @@
 
     <!-- Section Hero -->
     <section id="accueil" class="hero-section">
-        <div class="container">
-            <div class="hero-content animate fade-in">
-                <span class="subtitle">EXPERT DEPUIS 2020</span>
-                <h2>Nettoyage pour Professionnels</h2>
-                <p>Votre entreprise de nettoyage à Paris : des bureaux impeccables au service des professionnels.</p>
-                <a href="#devis" class="btn btn-primary">Obtenir un devis</a>
+        <div id="particles-js">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <span class="subtitle">EXPERT DEPUIS 2020</span>
+                    <h2>Nettoyage pour Professionnels</h2>
+                    <p>Votre entreprise de nettoyage à Paris : des bureaux impeccables au service des professionnels.</p>
+                    <a href="#devis" class="btn btn-primary">Obtenir un devis</a>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator" aria-hidden="true"></div>
@@ -110,42 +121,45 @@
     <!-- Section Services -->
     <section id="services" class="services-section">
         <div class="container">
-            <div class="section-header animate fade-in">
+            <div class="section-header fade-in">
                 <h2>Nos Services</h2>
                 <p>Des solutions de nettoyage adaptées à vos besoins professionnels</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card animate slide-in-left delay-1">
-                    <div class="service-icon img-effect">
-                        <img src="images/entretien_bureaux.jpg" alt="Entretien de bureaux" width="400" height="300">
+            <div class="service-wrapper">
+                <div class="services-grid">
+                    <div class="service-card slide-in-left delay-1">
+                        <div class="service-icon img-effect">
+                            <img src="images/entretien_bureaux.jpg" alt="Entretien de bureaux" width="400" height="300">
+                        </div>
+                        <div class="service-content">
+                            <h3>Entretien de Bureaux</h3>
+                            <p>Nettoyage complet de vos espaces de travail : sols, mobilier, sanitaires, espaces communs.</p>
+                            <a href="#contact" class="btn btn-secondary">En savoir plus</a>
+                        </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Entretien de Bureaux</h3>
-                        <p>Nettoyage complet de vos espaces de travail : sols, mobilier, sanitaires, espaces communs.</p>
-                        <a href="#contact" class="btn btn-secondary">En savoir plus</a>
+                    <div class="service-card slide-in-left delay-2">
+                        <div class="service-icon img-effect">
+                            <img src="images/nettoyage_vitres.png" alt="Nettoyage de vitres" width="400" height="300">
+                        </div>
+                        <div class="service-content">
+                            <h3>Nettoyage de Vitres</h3>
+                            <p>Nettoyage professionnel de vos surfaces vitrées pour une transparence parfaite et une luminosité optimale.</p>
+                            <a href="#contact" class="btn btn-secondary">En savoir plus</a>
+                        </div>
                     </div>
+                    <div class="service-card slide-in-right delay-3">
+                        <div class="service-icon img-effect">
+                            <img src="images/desinfection.png" alt="Désinfection" width="400" height="300">
+                        </div>
+                        <div class="service-content">
+                            <h3>Désinfection</h3>
+                            <p>Élimination des germes et virus pour un environnement de travail sain et sécurisé.</p>
+                            <a href="#contact" class="btn btn-secondary">En savoir plus</a>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="service-card animate slide-in-left delay-2">
-                    <div class="service-icon img-effect">
-                        <img src="images/nettoyage_vitres.png" alt="Nettoyage de vitres" width="400" height="300">
-                    </div>
-                    <div class="service-content">
-                        <h3>Nettoyage de Vitres</h3>
-                        <p>Nettoyage professionnel de vos surfaces vitrées pour une transparence parfaite et une luminosité optimale.</p>
-                        <a href="#contact" class="btn btn-secondary">En savoir plus</a>
-                    </div>
-                </div>
-                <div class="service-card animate slide-in-right delay-3">
-                    <div class="service-icon img-effect">
-                        <img src="images/desinfection.png" alt="Désinfection" width="400" height="300">
-                    </div>
-                    <div class="service-content">
-                        <h3>Désinfection</h3>
-                        <p>Élimination des germes et virus pour un environnement de travail sain et sécurisé.</p>
-                        <a href="#contact" class="btn btn-secondary">En savoir plus</a>
-                    </div>
-                </div>
-                <div class="service-card animate slide-in-right delay-4">
+                <div class="service-card slide-in-right delay-4">
                     <div class="service-icon">
                         <i class="fas fa-calendar-check" aria-hidden="true"></i>
                     </div>
@@ -162,19 +176,19 @@
     <!-- Section Zone d'intervention -->
     <section id="zone-intervention" class="zone-section">
         <div class="container">
-            <div class="section-header animate fade-in">
+            <div class="section-header fade-in">
                 <h2>Notre Zone d'Intervention</h2>
                 <p>Nous intervenons dans tout Paris et sa région</p>
             </div>
             <div class="zone-content">
-                <div class="zone-map animate slide-in-left">
+                <div class="zone-map slide-in-left">
                     <!-- Emplacement pour une carte de Paris -->
                     <div class="map-placeholder">
                         <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
                         <p>Paris et sa région</p>
                     </div>
                 </div>
-                <div class="zone-text animate slide-in-right">
+                <div class="zone-text slide-in-right">
                     <h3>Paris et sa région</h3>
                     <p>EcoPro Nettoyage intervient dans tous les arrondissements de Paris ainsi que dans les communes limitrophes. Nos équipes se déplacent rapidement pour répondre à vos besoins de nettoyage professionnel.</p>
                     <ul class="zone-list">
@@ -192,33 +206,33 @@
     <!-- Section Engagements -->
     <section id="engagements" class="engagements-section">
         <div class="container">
-            <div class="section-header animate fade-in">
+            <div class="section-header fade-in">
                 <h2>Nos Engagements</h2>
                 <p>La qualité et la satisfaction client au cœur de nos préoccupations</p>
             </div>
             <div class="engagements-grid">
-                <div class="engagement-card animate zoom-in delay-1">
+                <div class="engagement-card zoom-in delay-1">
                     <div class="engagement-icon">
                         <i class="fas fa-leaf" aria-hidden="true"></i>
                     </div>
                     <h3>Écologique</h3>
                     <p>Utilisation de produits respectueux de l'environnement et de méthodes écologiques pour préserver la planète.</p>
                 </div>
-                <div class="engagement-card animate zoom-in delay-2">
+                <div class="engagement-card zoom-in delay-2">
                     <div class="engagement-icon">
                         <i class="fas fa-shield-alt" aria-hidden="true"></i>
                     </div>
                     <h3>Fiable</h3>
                     <p>Personnel qualifié et formé régulièrement pour garantir un service de qualité constante.</p>
                 </div>
-                <div class="engagement-card animate zoom-in delay-3">
+                <div class="engagement-card zoom-in delay-3">
                     <div class="engagement-icon">
                         <i class="fas fa-clock" aria-hidden="true"></i>
                     </div>
                     <h3>Ponctuel</h3>
                     <p>Respect des délais et des horaires convenus pour ne pas perturber votre activité professionnelle.</p>
                 </div>
-                <div class="engagement-card animate zoom-in delay-4">
+                <div class="engagement-card zoom-in delay-4">
                     <div class="engagement-icon">
                         <i class="fas fa-thumbs-up" aria-hidden="true"></i>
                     </div>
@@ -232,12 +246,12 @@
     <!-- Section Témoignages -->
     <section id="temoignages" class="testimonials-section">
         <div class="container">
-            <div class="section-header animate fade-in">
+            <div class="section-header fade-in">
                 <h2>Témoignages Clients</h2>
                 <p>Ce que nos clients disent de nous</p>
             </div>
             <div class="testimonials-slider">
-                <div class="testimonial-item animate fade-in delay-1">
+                <div class="testimonial-item fade-in delay-1">
                     <div class="testimonial-content">
                         <p>"EcoPro Nettoyage assure l'entretien de nos bureaux depuis plus d'un an. Leur professionnalisme et la qualité de leur travail sont irréprochables. Je les recommande vivement !"</p>
                     </div>
@@ -255,7 +269,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-item animate fade-in delay-2">
+                <div class="testimonial-item fade-in delay-2">
                     <div class="testimonial-content">
                         <p>"Nous faisons appel à EcoPro Nettoyage pour le nettoyage de nos vitres et la désinfection de nos locaux. Leur équipe est efficace, discrète et respecte parfaitement nos contraintes horaires."</p>
                     </div>
@@ -273,7 +287,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-item animate fade-in delay-3">
+                <div class="testimonial-item fade-in delay-3">
                     <div class="testimonial-content">
                         <p>"Un service client réactif et des prestations de qualité. EcoPro Nettoyage a su s'adapter à nos besoins spécifiques et propose des solutions sur mesure."</p>
                     </div>
@@ -311,12 +325,12 @@
     <!-- Section Tarifs -->
     <section id="tarifs" class="pricing-section">
         <div class="container">
-            <div class="section-header animate fade-in">
+            <div class="section-header fade-in">
                 <h2>Nos Tarifs</h2>
                 <p>Des formules adaptées à tous les budgets</p>
             </div>
             <div class="pricing-grid">
-                <div class="pricing-card animate slide-in-left delay-1">
+                <div class="pricing-card slide-in-left delay-1">
                     <div class="pricing-header">
                         <h3>Formule Essentielle</h3>
                         <div class="price">À partir de <span>25€</span>/h</div>
@@ -335,7 +349,7 @@
                         <a href="#devis" class="btn btn-secondary">Demander un devis</a>
                     </div>
                 </div>
-                <div class="pricing-card featured animate zoom-in delay-2">
+                <div class="pricing-card featured zoom-in delay-2">
                     <div class="pricing-header">
                         <h3>Formule Complète</h3>
                         <div class="price">À partir de <span>35€</span>/h</div>
@@ -354,7 +368,7 @@
                         <a href="#devis" class="btn btn-primary">Demander un devis</a>
                     </div>
                 </div>
-                <div class="pricing-card animate slide-in-right delay-3">
+                <div class="pricing-card slide-in-right delay-3">
                     <div class="pricing-header">
                         <h3>Formule Premium</h3>
                         <div class="price">À partir de <span>45€</span>/h</div>
@@ -381,12 +395,12 @@
     <!-- Section FAQ -->
     <section id="faq" class="faq-section">
         <div class="container">
-            <div class="section-header animate fade-in">
+            <div class="section-header fade-in">
                 <h2>Questions Fréquentes</h2>
                 <p>Tout ce que vous devez savoir sur nos services</p>
             </div>
             <div class="faq-container">
-                <div class="faq-item animate fade-in delay-1">
+                <div class="faq-item fade-in delay-1">
                     <div class="faq-question" tabindex="0">
                         <h3>Quels types de locaux nettoyez-vous ?</h3>
                         <span class="faq-toggle"><i class="fas fa-plus" aria-hidden="true"></i></span>
@@ -395,7 +409,7 @@
                         <p>Nous intervenons dans tous types de locaux professionnels : bureaux, commerces, cabinets médicaux, espaces de coworking, etc. Nos équipes sont formées pour s'adapter aux spécificités de chaque environnement.</p>
                     </div>
                 </div>
-                <div class="faq-item animate fade-in delay-2">
+                <div class="faq-item fade-in delay-2">
                     <div class="faq-question" tabindex="0">
                         <h3>À quelle fréquence pouvez-vous intervenir ?</h3>
                         <span class="faq-toggle"><i class="fas fa-plus" aria-hidden="true"></i></span>
@@ -404,7 +418,7 @@
                         <p>Nous proposons des interventions quotidiennes, hebdomadaires, bi-mensuelles ou mensuelles selon vos besoins. Nous pouvons également réaliser des prestations ponctuelles pour des événements spécifiques.</p>
                     </div>
                 </div>
-                <div class="faq-item animate fade-in delay-3">
+                <div class="faq-item fade-in delay-3">
                     <div class="faq-question" tabindex="0">
                         <h3>Utilisez-vous des produits écologiques ?</h3>
                         <span class="faq-toggle"><i class="fas fa-plus" aria-hidden="true"></i></span>
@@ -413,7 +427,7 @@
                         <p>Oui, nous privilégions l'utilisation de produits écologiques certifiés, respectueux de l'environnement et de la santé de vos collaborateurs. Nous pouvons adapter nos produits en fonction de vos exigences spécifiques.</p>
                     </div>
                 </div>
-                <div class="faq-item animate fade-in delay-4">
+                <div class="faq-item fade-in delay-4">
                     <div class="faq-question" tabindex="0">
                         <h3>Comment est établi le devis ?</h3>
                         <span class="faq-toggle"><i class="fas fa-plus" aria-hidden="true"></i></span>
@@ -429,34 +443,34 @@
     <!-- Section Contact et Devis -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <div class="section-header animate fade-in">
+            <div class="section-header fade-in">
                 <h2>Contact</h2>
                 <p>Contactez-nous pour un devis gratuit ou plus d'informations</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
-                    <div class="info-item animate slide-in-left delay-1">
+                    <div class="info-item slide-in-left delay-1">
                         <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                         <h3>Adresse</h3>
                         <p>123 Avenue de Paris<br>75001 Paris, France</p>
                     </div>
-                    <div class="info-item animate slide-in-left delay-2">
+                    <div class="info-item slide-in-left delay-2">
                         <i class="fas fa-phone" aria-hidden="true"></i>
                         <h3>Téléphone</h3>
                         <p>01 23 45 67 89</p>
                     </div>
-                    <div class="info-item animate slide-in-right delay-3">
+                    <div class="info-item slide-in-right delay-3">
                         <i class="fas fa-envelope" aria-hidden="true"></i>
                         <h3>Email</h3>
                         <p>contact@ecopro-nettoyage.fr</p>
                     </div>
-                    <div class="info-item animate slide-in-right delay-4">
+                    <div class="info-item slide-in-right delay-4">
                         <i class="fas fa-clock" aria-hidden="true"></i>
                         <h3>Horaires</h3>
                         <p>Lundi - Vendredi: 8h00 - 18h00<br>Samedi: 9h00 - 12h00</p>
                     </div>
                 </div>
-                <div class="contact-form animate fade-in" id="devis">
+                <div class="contact-form fade-in" id="devis">
                     <h3>Demande de devis</h3>
                     <form id="devisForm" novalidate>
                         <div class="form-group required">
