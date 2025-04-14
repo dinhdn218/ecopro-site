@@ -543,7 +543,7 @@ img {
 }
 
 .service-card:hover > * {
-  transform: translate(-10px, -10px);
+  transform: translate(-6px, -6px);
   transition: transform 0.3s ease;
 }
 
